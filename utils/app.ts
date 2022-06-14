@@ -1,5 +1,6 @@
 import { ThemeManager } from './theme'
 import { LanguageManager } from './lang'
+import { CurrencyManager } from './currency'
 
 export interface IApp {
   name: string
@@ -12,10 +13,10 @@ export interface IApp {
 export function AppSetup() {
   // declare app information
   const app: IApp = {
-    name: 'Nuxt 3 Awesome Starter',
+    name: 'Y2Y NUXT3',
     author: {
-      name: 'viandwi24',
-      link: 'https://github.com/viandwi24',
+      name: 'ersensari',
+      link: 'https://github.com/ersensari',
     },
   }
   useState('app', () => app)
@@ -26,9 +27,13 @@ export function AppSetup() {
   // use language manager
   const languageManager = LanguageManager()
 
+  // use currency manager
+  const currencyManager = CurrencyManager()
+
   return {
     app,
     themeManager,
     languageManager,
+    currencyManager,
   }
 }

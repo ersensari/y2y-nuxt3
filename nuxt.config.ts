@@ -1,8 +1,8 @@
+import { resolve } from 'path'
 import { defineNuxtConfig } from 'nuxt'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     intlify?: IntlifyModuleOptions
@@ -24,8 +24,12 @@ export default defineNuxtConfig({
           content: 'Nuxt 3 Awesome Starter',
         },
       ],
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }],
     },
+  },
+
+  alias: {
+    style: resolve(__dirname, './assets/sass'),
   },
 
   // css
@@ -33,7 +37,6 @@ export default defineNuxtConfig({
     'virtual:windi-base.css',
     'virtual:windi-components.css',
     'virtual:windi-utilities.css',
-    '~/assets/sass/vendor.scss',
     '~/assets/sass/app.scss',
   ],
 
@@ -76,6 +79,14 @@ export default defineNuxtConfig({
         ],
       }),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          sourceMap: true,
+          additionalData: `@import "style/vendor.scss";`,
+        },
+      },
+    },
   },
 
   // localization - i18n config
@@ -84,7 +95,7 @@ export default defineNuxtConfig({
     vueI18n: {
       locale: 'en',
       fallbackLocale: 'en',
-      availableLocales: ['en', 'id', 'ja'],
+      availableLocales: ['en', 'tr'],
     },
   },
 

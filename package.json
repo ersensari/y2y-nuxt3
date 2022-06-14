@@ -1,12 +1,8 @@
 {
-  "name": "nuxt3-awesome-starter",
+  "name": "y2y-nuxt3",
   "version": "0.1.0",
   "description": "a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Tailwindcss 3",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/viandwi24/nuxt3-awesome-starter"
-  },
-  "author": "viandwi24",
+  "author": "ersensari",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
@@ -20,36 +16,36 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.1.0",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@headlessui/vue": "1.5.0",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@headlessui/vue": "^1.6.4",
     "@iconify/json": "^2.1.61",
-    "@intlify/nuxt3": "^0.1.10",
-    "@nuxtjs/eslint-config-typescript": "^7.0.2",
-    "@nuxtjs/eslint-module": "3.1.0",
-    "@nuxtjs/svg": "^0.3.0",
-    "@pinia/nuxt": "^0.1.8",
-    "@vueuse/nuxt": "8.4.2",
-    "eslint": "^8.3.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^3.0.0",
+    "@intlify/nuxt3": "^0.2.2",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/svg": "^0.4.0",
+    "@pinia/nuxt": "^0.1.9",
+    "@vueuse/nuxt": "^8.6.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^3.2.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^12.3.3",
-    "nuxt": "npm:nuxt3@3.0.0-rc.3-27584539.9d28c0a",
-    "nuxt-windicss": "2.2.8",
-    "pinia": "^2.0.9",
-    "postcss": "8.4.7",
-    "postcss-loader": "^6.2.1",
-    "prettier": "^2.5.0",
-    "sass": "1.49.9",
-    "sass-loader": "^12.4.0",
-    "typescript": "^4.5.2",
-    "unplugin-icons": "0.14.3",
-    "unplugin-vue-components": "0.19.5"
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "nuxt": "^3.0.0-rc.4",
+    "nuxt-windicss": "^2.4.2",
+    "pinia": "^2.0.14",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "typescript": "^4.7.3",
+    "unplugin-icons": "^0.14.3",
+    "unplugin-vue-components": "^0.19.6"
   },
   "lint-staged": {
-    "**/*.{js,ts,vue,html,css,scss}": [
+    "**/*.{js,ts,vue,html}": [
       "yarn lintfix"
     ]
   }

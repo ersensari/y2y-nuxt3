@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import type { Plugin } from 'windicss/types/interfaces'
 
 // colors
-// import colors from 'windicss/colors'
+import colors from 'windicss/colors'
 
 // plugins
 import TypographyPlugin from 'windicss/plugin/typography'
@@ -47,8 +47,27 @@ export default defineConfig({
         '8xl': '90rem',
       },
       colors: {
-        primary: MyTheme.colors.green,
+        primary: colors.blue,
         green: MyTheme.colors.green,
+      },
+      fontFamily: {
+        sans: ['GT Walsheim Pro'],
+        serif: ['"Cooper Lt BT"'],
+        display: ['"Cooper Lt BT"'],
+        body: ['GT Walsheim Pro'],
+      },
+      fontSize: {
+        hero: ['60px', '110%'],
+        heading: ['40px', '120%'],
+        header: ['18px', '100%'],
+        body: ['18px', '145%'],
+        body2: ['16px', '135%'],
+        button: ['20px', '100%'],
+        footnote: ['12px', '124%'],
+        h1: ['48px', '124%'],
+        h2: ['36px', '124%'],
+        h3: ['24px', '124%'],
+        h4: ['20px', '120%'],
       },
     },
   },
