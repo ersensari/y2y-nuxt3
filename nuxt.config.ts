@@ -3,6 +3,8 @@ import { defineNuxtConfig } from 'nuxt'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import SvgLoader from 'vite-svg-loader'
+
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     intlify?: IntlifyModuleOptions
@@ -30,6 +32,8 @@ export default defineNuxtConfig({
 
   alias: {
     style: resolve(__dirname, './assets/sass'),
+    icons: resolve(__dirname, './assets/icons'),
+    images: resolve(__dirname, './assets/images'),
   },
 
   // css
@@ -54,7 +58,6 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     'unplugin-icons/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
   ],
@@ -70,6 +73,7 @@ export default defineNuxtConfig({
   // vite plugins
   vite: {
     plugins: [
+      SvgLoader({ svgo: false }),
       UnpluginComponentsVite({
         dts: true,
         resolvers: [

@@ -1,23 +1,23 @@
 import { ICurrency } from '~/types/ICurrency'
 
 export const availableCurrencies: ICurrency = {
-  usd: {
+  USD: {
     name: 'currency.us_dollar',
     iso: 'USD',
     flag: '🇺🇸',
-    icon: 'currencyUsd',
+    icon: 'currency-usd',
   },
-  eur: {
+  EUR: {
     name: 'currency.euro',
     iso: 'EUR',
     flag: '🇪🇺',
-    icon: 'currencyEur',
+    icon: 'currency-eur',
   },
-  trl: {
+  TRY: {
     name: 'currency.turkish_lira',
-    iso: 'TRL',
+    iso: 'TRY',
     flag: '🇪🇺',
-    icon: 'currencyTry',
+    icon: 'currency-try',
   },
 }
 

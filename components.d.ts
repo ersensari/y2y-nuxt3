@@ -11,7 +11,6 @@ declare module '@vue/runtime-core' {
     'IconFaSolid:ellipsisV': typeof import('~icons/fa-solid/ellipsis-v')['default']
     'IconLa:language': typeof import('~icons/la/language')['default']
     'IconMdi:checkCircle': typeof import('~icons/mdi/check-circle')['default']
-    'IconMdi:currencyUsd': typeof import('~icons/mdi/currency-usd')['default']
     'IconMdi:githubFace': typeof import('~icons/mdi/github-face')['default']
     'IconSimpleIcons:nuxtdotjs': typeof import('~icons/simple-icons/nuxtdotjs')['default']
     'IconUil:angleDown': typeof import('~icons/uil/angle-down')['default']
