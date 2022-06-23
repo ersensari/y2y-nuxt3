@@ -39,8 +39,9 @@ const currencySetting = useState<string>('currency.setting')
         class="transition-colors duration-300"
       >
         <span class="justify-center items-center flex">
-          <IconSvg :icon="availableCurrencies[currencySetting].icon" />
-          {{ availableCurrencies[currencySetting].iso }}
+          <Suspense>
+            <component :is="availableCurrencies[currencySetting].icon" />
+          </Suspense>
         </span>
       </ListboxButton>
       <ListboxOptions
@@ -59,7 +60,9 @@ const currencySetting = useState<string>('currency.setting')
           }"
         >
           <span class="text-sm mr-2">
-            <IconSvg :icon="curr.icon" />
+            <Suspense>
+              <component :is="curr.icon" />
+            </Suspense>
           </span>
           <span class="flex-1 truncate">
             {{ $t(curr.name) }}

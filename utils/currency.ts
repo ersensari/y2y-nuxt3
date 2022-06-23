@@ -1,27 +1,40 @@
+import { FunctionalComponent } from 'vue'
 import { ICurrency } from '~/types/ICurrency'
+
+export const icons: { [key: string]: FunctionalComponent } = {
+  TRY: defineAsyncComponent(
+    () => import('../assets/icons/currency-try.svg?component')
+  ),
+  USD: defineAsyncComponent(
+    () => import('../assets/icons/currency-usd.svg?component')
+  ),
+  EUR: defineAsyncComponent(
+    () => import('../assets/icons/currency-eur.svg?component')
+  ),
+}
 
 export const availableCurrencies: ICurrency = {
   USD: {
     name: 'currency.us_dollar',
     iso: 'USD',
     flag: '🇺🇸',
-    icon: 'currency-usd',
+    icon: icons.USD,
   },
   EUR: {
     name: 'currency.euro',
     iso: 'EUR',
     flag: '🇪🇺',
-    icon: 'currency-eur',
+    icon: icons.EUR,
   },
   TRY: {
     name: 'currency.turkish_lira',
     iso: 'TRY',
     flag: '🇪🇺',
-    icon: 'currency-try',
+    icon: icons.TRY,
   },
 }
 
-export const DEFAULT_CURRENCY: string = 'usd'
+export const DEFAULT_CURRENCY: string = 'USD'
 
 export function CurrencyManager() {
   // composable

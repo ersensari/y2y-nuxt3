@@ -29,10 +29,12 @@ const localeSetting = useState<string>('locale.setting')
       as="div"
       class="relative flex items-center"
     >
-      <ListboxLabel class="sr-only">Theme</ListboxLabel>
+      <ListboxLabel class="sr-only">{{
+        $t('components.change_language')
+      }}</ListboxLabel>
       <ListboxButton
         type="button"
-        title="Change Language"
+        :title="$t('components.change_language')"
         class="transition-colors duration-300"
       >
         <span class="justify-center items-center flex">

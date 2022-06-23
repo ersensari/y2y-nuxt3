@@ -1,20 +1,11 @@
 <template>
-  <TransitionRoot appear>
-    <TransitionChild
-      as="template"
-      enter="duration-300 ease-out"
-      enter-from="opacity-0"
-      enter-to="opacity-100"
-      leave="duration-300 ease-in"
-      leave-from="opacity-100"
-      leave-to="opacity-0"
-    >
-      <Suspense>
-        <img :src="`../assets/icons/${icon}.svg?component`" v-bind="$attrs" />
-      </Suspense>
-    </TransitionChild>
-  </TransitionRoot>
+  <transition name="fade" mode="out-in">
+    <iconComponent v-bind.sync="$attrs" />
+  </transition>
 </template>
 <script lang="ts" setup>
-defineProps<{ icon: string }>()
+const props = defineProps<{ icon: string }>()
+const iconComponent = defineAsyncComponent(
+  () => import(`../assets/icons/${props.icon}.svg?component`)
+)
 </script>
