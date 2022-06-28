@@ -373,8 +373,8 @@
     }
   },
   "currency": {
-    "us_dollar": "US DOLLAR",
-    "euro": "EURO",
-    "turkish_lira": "TURKISH LIRA"
+    "us_dollar": "US Dollar",
+    "euro": "Euro",
+    "turkish_lira": "Turkish Lira"
   }
 }

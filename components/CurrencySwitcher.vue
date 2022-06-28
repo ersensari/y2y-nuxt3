@@ -81,7 +81,7 @@ const currencySetting = useState<string>('currency.setting')
         :value="curr.iso"
         class="flex items-center space-x-2"
       >
-        {{ curr.flag }} {{ curr.name }} ({{ curr.iso }})
+        {{ curr.flag }} {{ $t(curr.name) }} ({{ curr.iso }})
       </option>
     </select>
   </div>
